@@ -27,6 +27,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  # Thermite specific see https://github.com/malept/thermite#usage
+  spec.extensions << 'ext/Rakefile'
+  spec.add_runtime_dependency 'thermite', '~> 0'
+
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
