@@ -1,38 +1,50 @@
 # Fireflower
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fireflower`. To experiment with that code, run `bin/console` for an interactive prompt.
+[Rust](https://www.rust-lang.org/en-US/) is a [fireflower](https://brson.github.io/fireflowers/), [also this](https://thefeedbackloop.xyz/safety-is-rusts-fireflower/). This gem meant as a workshop for Rust with Ruby. I would not recommend using this as any kind of base for an actual gem.
 
-TODO: Delete this and the text above, and describe your gem
+---
 
-## Installation
+![](https://brson.github.io/fireflowers/rust-fire-mario-equation.png)
 
-Add this line to your application's Gemfile:
+*Image credit https://brson.github.io/fireflowers*
 
-```ruby
-gem 'fireflower'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install fireflower
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+- If you already have Rust installed and ruby installed with shared extensions or would rather do this without Vagrant skip to **Without vagrant** which will be Linux/OSX only and assumes [rbenv](https://github.com/rbenv/rbenv).
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Vagrant
+- Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or
+  `git clone https://github.com/whatisinternet/fireflower.git`
+- In command prompt or terminal: `cd fireflower`
+- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- Install [Vagrant](https://www.vagrantup.com/downloads.html)
+- In command prompt or terminal: `vagrant up`
+  - This will take a while
+- `vagrant ssh`
+- You can edit/change/checkout branches locally (in another terminal/program) and it will be reflected in the
+  prompt that you ran `vagrant ssh` in.
+- On master make sure you run `bundle install`
+
+### Without Vagrant
+- Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or
+  `git clone https://github.com/whatisinternet/fireflower.git`
+- `cd fireflower`
+- `CONFIGURE_OPTS=--enable-shared rbenv install 2.3.0`
+- `rbenv global 2.3.0 && ruby -v`
+- `gem install bundler`
+- `rbenv rehash`
+- Go to [rustup.rs](https://rustup.rs/) and install Rust
+- `bundle install`
+
+
+## Tests:
+- In vagrant:
+  - `bundle exec rake && rspec`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fireflower. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/whatisinternet/fireflower. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
