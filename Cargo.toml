@@ -11,3 +11,4 @@ crate-type = ["dylib"]
 
 [dependencies]
 ruru = "0.9"
+Inflector = "*"
