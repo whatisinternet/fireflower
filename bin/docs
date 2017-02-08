@@ -1,0 +1,32 @@
+#!/bin/bash
+
+git branch -D gh-pages
+git checkout --quiet --orphan gh-pages
+echo assets/ >> .gitignore
+echo node_modules/ >> .gitignore
+echo bin/ >> .gitignore
+echo slides/ >> .gitignore
+echo dist/ >> .gitignore
+echo template/ >> .gitignore
+echo gulpfile.js >> .gitignore
+echo package.json >> .gitignore
+echo yarn.lock >> .gitignore
+echo .yarnclean >> .gitignore
+echo README.md >> .gitignore
+
+git status
+git reset
+git status
+git add .gitignore
+git commit -m "gitignore :shipit:"
+git status
+yarn gulp
+yarn gulp html-images
+yarn gulp css-images
+mv dist/index.html .
+
+git status
+git add index.html
+git commit -m "docs :shipit:"
+
+echo "READY TO DEPLOY"

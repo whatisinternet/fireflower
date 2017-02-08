@@ -1,0 +1,6 @@
+#!/bin/bash
+
+yarn gclean
+yarn gulp
+yarn gulp html-images
+yarn gulp css-images

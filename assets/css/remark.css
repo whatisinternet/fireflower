@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+body {
+}
+
+h1, h3 {
+  font-family: 'VT323', monospace;
+  font-size: 4em;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+a {
+  color: #fafafa;
+}
+
+div.remark-slide-content {
+  background: url("../assets/img/zzkmki0yh6i-anna-popovic.jpg");
+  background-size: cover;
+  font-family: 'Quicksand';
+  font-weight: normal;
+  color: #efefef;
+  font-size: 1.5rem;
+}
+
+div.remark-slide-content h2 {
+  font-size: 3em;
+}
+
+.remark-slide-number {
+  display: none !important;
+}
+
+.column:first-of-type {float:left}
+.column:last-of-type {float:right}
+
+.split-40 .column:first-of-type {
+  padding-right: 1em;
+  width: 40%;
+}
+.split-40 .column:last-of-type {
+  padding-left: 1em;
+  width: 40%;
+}
