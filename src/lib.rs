@@ -23,14 +23,15 @@ methods!(
         RString::new(&test.unwrap_or(RString::new("")).to_string().to_snake_case())
     }
 
-    // fn to_camel_case(test: RString) -> RString {
-    // }
+    fn to_camel_case(test: RString) -> RString {
+        RString::new(&test.unwrap_or(RString::new("")).to_string().to_camel_case())
+    }
 );
 
 #[no_mangle]
 pub extern "C" fn init_fireflower() {
     Class::from_existing("Case").define(|itself| {
         itself.def("_to_snake_case", to_snake_case);
-        // itself.def("_to_camel_case", to_camel_case);
+        itself.def("_to_camel_case", to_camel_case);
     });
 }

@@ -18,12 +18,6 @@ class Case
   def to_camel_case(non_camel_cased_string = "")
     _to_camel_case(non_camel_cased_string.to_s)
   end
-
-  private
-
-  def _to_camel_case(non_camel_cased_string)
-    raise "NOT IMPLEMENTED ERROR"
-  end
 end
 
 toplevel_dir = File.dirname(File.dirname(__FILE__))

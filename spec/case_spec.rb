@@ -16,36 +16,36 @@ describe Case do
       end
     end
 
-    xdescribe 'basic functionality' do
+    describe 'basic functionality' do
       it 'correctly handles nil by returning an empty string' do
         expect(@case.to_camel_case).to eq("")
       end
 
-      xit 'correctly handles empty string by returning an empty string' do
+      it 'correctly handles empty string by returning an empty string' do
         expect(@case.to_camel_case("")).to eq("")
       end
 
-      xit 'accepts numbers and returrns the string for them' do
+      it 'accepts numbers and returrns the string for them' do
         expect(@case.to_camel_case(1)).to eq("1")
         expect(@case.to_camel_case(1.5)).to eq("1.5")
       end
     end
 
-    xdescribe 'full functionality' do
+    describe 'full functionality' do
       it 'returns a string without modification if none is needed' do
         expect(@case.to_camel_case("foo")).to eq("foo")
       end
 
-      xit 'returns a camel case string if given one' do
+      it 'returns a camel case string if given one' do
         expect(@case.to_camel_case("fooBar")).to eq("fooBar")
       end
 
-      xit 'returns a camel case string if given snake case' do
+      it 'returns a camel case string if given snake case' do
         expect(@case.to_camel_case("foo_bar")).to eq("fooBar")
       end
     end
 
-    xdescribe 'benchmarks' do
+    describe 'benchmarks' do
       it 'performs the camel in Rust at least 10 times faster than Ruby' do
         expect {
 
