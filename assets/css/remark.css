@@ -5,9 +5,8 @@
 body {
 }
 
-h1, h3 {
+h1, h2, h3, h4, h5 {
   font-family: 'VT323', monospace;
-  font-size: 4em;
 }
 
 .remark-code, .remark-inline-code {
@@ -15,15 +14,15 @@ h1, h3 {
 }
 
 a {
-  color: #fafafa;
+  color: #fff;
 }
 
 div.remark-slide-content {
-  background: url("../assets/img/zzkmki0yh6i-anna-popovic.jpg");
+  background: url("../assets/img/zzkmki0yh6i-anna-popovic.png");
   background-size: cover;
   font-family: 'Quicksand';
   font-weight: normal;
-  color: #efefef;
+  color: #fff;
   font-size: 1.5rem;
 }
 
