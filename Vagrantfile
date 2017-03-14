@@ -53,6 +53,7 @@ source ~/.profile
 
 cd /home/vagrant/fireflower
 bundle install
+echo cd ~/fireflower >> ~/.bashrc
 
 SCRIPT
 
