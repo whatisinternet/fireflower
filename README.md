@@ -1,6 +1,6 @@
 # Fireflower
 
-[Rust](https://www.rust-lang.org/en-US/) is a [fireflower](https://brson.github.io/fireflowers/), [also this](https://thefeedbackloop.xyz/safety-is-rusts-fireflower/). This gem meant as a workshop for Rust with Ruby. I would not recommend using this as any kind of base for an actual gem.
+This gem meant as a workshop for Rust with Ruby. I would not recommend using this as any kind of base for an actual gem.
 
 ---
 
@@ -11,14 +11,19 @@
 
 ## Development
 
-- If you already have Rust installed and ruby installed with shared extensions or would rather do this without Vagrant skip to **Without vagrant** which will be Linux/OSX only and assumes [rbenv](https://github.com/rbenv/rbenv).
+- If you already have Rust installed and ruby installed with shared extensions or would rather do this without Vagrant skip to **Without vagrant** which will be Linux/OSX only and assumes you're using [rbenv](https://github.com/rbenv/rbenv).
 
 ### Vagrant
+- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- Install [Vagrant](https://www.vagrantup.com/downloads.html)
+
+The super easy way:
+- `curl https://raw.githubusercontent.com/whatisinternet/fireflower/master/install -sSf | sh`
+
+The super easy non-curl way:
 - Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or
   `git clone https://github.com/whatisinternet/fireflower.git`
 - In command prompt or terminal: `cd fireflower`
-- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- Install [Vagrant](https://www.vagrantup.com/downloads.html)
 - In command prompt or terminal: `vagrant up`
   - This will take a while
 - `vagrant ssh`
