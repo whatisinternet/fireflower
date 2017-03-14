@@ -51,11 +51,11 @@ describe Case do
 
           @case.to_camel_case("foo_bar_is_a_string")
 
-        }.to perform_faster_than(time: 0.4, warmup: 0.2) {
+        }.to perform_faster_than(time: 1.4, warmup: 1.2) {
 
           @case.ruby_to_camel_case("foo_bar_is_a_string")
 
-        }.at_least(10).times
+        }.at_least(12).times
       end
     end
   end
@@ -106,11 +106,11 @@ describe Case do
 
           @case.to_snake_case("fooBarIsAString")
 
-        }.to perform_faster_than(time: 0.4, warmup: 0.2) {
+        }.to perform_faster_than(time: 2.4, warmup: 2.2) {
 
           @case.ruby_to_snake_case("fooBarIsAString")
 
-        }.at_least(30).times
+        }.at_least(35).times
       end
     end
   end
