@@ -11,12 +11,20 @@ class Case
     non_camel_cased_string.to_s.camelize
   end
 
+  def ruby_to_pascal_case(non_pascal_cased_string = "")
+    non_pascal_cased_string.to_s.camelize
+  end
+
   def to_snake_case(non_snake_cased_string = "")
     _to_snake_case(non_snake_cased_string.to_s)
   end
 
   def to_camel_case(non_camel_cased_string = "")
     _to_camel_case(non_camel_cased_string.to_s)
+  end
+
+  def to_pascal_case(non_pascal_cased_string = "")
+    _to_pascal_case(non_pascal_cased_string.to_s)
   end
 end
 

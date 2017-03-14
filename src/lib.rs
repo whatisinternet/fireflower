@@ -20,11 +20,15 @@ methods!(
     _itself,
 
     fn to_snake_case(test: RString) -> RString {
-        RString::new(&test.unwrap_or(RString::new("")).to_string().to_snake_case())
+        RString::new(&test.unwrap_or(RString::new("")).to_str().to_snake_case())
     }
 
     fn to_camel_case(test: RString) -> RString {
-        RString::new(&test.unwrap_or(RString::new("")).to_string().to_camel_case())
+        RString::new(&test.unwrap_or(RString::new("")).to_str().to_camel_case())
+    }
+
+    fn to_pascal_case(test: RString) -> RString {
+        RString::new(&test.unwrap_or(RString::new("")).to_str().to_pascal_case())
     }
 );
 
@@ -33,5 +37,6 @@ pub extern "C" fn init_fireflower() {
     Class::from_existing("Case").define(|itself| {
         itself.def("_to_snake_case", to_snake_case);
         itself.def("_to_camel_case", to_camel_case);
+        itself.def("_to_pascal_case", to_pascal_case);
     });
 }
