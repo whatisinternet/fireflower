@@ -1,0 +1,13 @@
+[package]
+name="fireflower"
+version="0.1.0"
+publish=false
+
+[package.metadata.thermite]
+
+[lib]
+
+crate-type = ["dylib"]
+
+[dependencies]
+ruru = "0.9"
