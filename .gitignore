@@ -1,1 +1,11 @@
 node_modules/
+.vagrant/
+Cargo
+Gemfile
+Cargo.lock
+Cargo.toml
+Gemfile.lock
+fireflower/
+mkmf.log
+target
+dist/combined_slides.md
