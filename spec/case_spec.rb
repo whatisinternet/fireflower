@@ -115,7 +115,7 @@ describe Case do
     end
   end
 
-  context 'screaming pascal case' do
+  context 'pascal case' do
     describe 'setup' do
       it 'has a to_pascal_case method' do
         expect(@case).to respond_to(:to_pascal_case)
@@ -170,7 +170,7 @@ describe Case do
     end
   end
 
-  context 'screaming pascal case' do
+  context 'pascal case' do
     describe 'setup' do
       it 'has a to_pascal_case method' do
         expect(@case).to respond_to(:to_pascal_case)
