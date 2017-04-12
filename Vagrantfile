@@ -53,6 +53,8 @@ source ~/.profile
 
 cd /home/vagrant/fireflower
 git checkout master
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 bundle install
 git checkout step0
 echo cd ~/fireflower >> ~/.bashrc
