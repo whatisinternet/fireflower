@@ -28,7 +28,7 @@ The super easy non-curl way:
 2. In command prompt or terminal: `cd fireflower`
 3. In command prompt or terminal: `vagrant up` (This will take a while)
 4. `vagrant ssh`
-5. `cd fireflower`
+5. `pwd` if the directory is not `fireflower` then `cd fireflower`
 6. `git checkout master`
 7. `bundle install`
 8. You're now ready.
@@ -40,7 +40,7 @@ The super easy non-curl way:
 2. In command prompt or terminal: `cd fireflower`
 3. In command prompt or terminal: `vagrant up` (This will take a while)
 4. `vagrant ssh`
-5. `cd fireflower`
+5. `pwd` if the directory is not `fireflower` then `cd fireflower`
 6. `git checkout master`
 7. `bundle install`
 8. You're now ready.
