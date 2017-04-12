@@ -52,8 +52,11 @@ source ~/.bashrc
 source ~/.profile
 
 cd /home/vagrant/fireflower
+git checkout master
 bundle install
+git checkout step0
 echo cd ~/fireflower >> ~/.bashrc
+echo cd ~/fireflower >> ~/.profile
 
 SCRIPT
 
