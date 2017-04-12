@@ -9,43 +9,57 @@ This gem meant as a workshop for Rust with Ruby. I would not recommend using thi
 *Image credit https://brson.github.io/fireflowers*
 
 
-## Development
+## Getting going:
 
-- If you already have Rust installed and ruby installed with shared extensions or would rather do this without Vagrant skip to **Without vagrant** which will be Linux/OSX only and assumes you're using [rbenv](https://github.com/rbenv/rbenv).
+### All
+1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
+3. Skip to either Windows or Mac/Linux
 
-### Vagrant
-- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- Install [Vagrant](https://www.vagrantup.com/downloads.html)
+---
+
+### Mac/Linux
 
 The super easy way:
-- `curl https://raw.githubusercontent.com/whatisinternet/fireflower/master/install -sSf | sh`
+1. `curl https://raw.githubusercontent.com/whatisinternet/fireflower/master/install -sSf | sh`
 
 The super easy non-curl way:
-- Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or
-  `git clone https://github.com/whatisinternet/fireflower.git`
-- In command prompt or terminal: `cd fireflower`
-- In command prompt or terminal: `vagrant up`
-  - This will take a while
-- `vagrant ssh`
-- You can edit/change/checkout branches locally (in another terminal/program) and it will be reflected in the
-  prompt that you ran `vagrant ssh` in.
-- On master make sure you run `bundle install`
+1. Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or `git clone https://github.com/whatisinternet/fireflower.git`
+2. In command prompt or terminal: `cd fireflower`
+3. In command prompt or terminal: `vagrant up` (This will take a while)
+4. `vagrant ssh`
+5. `cd fireflower`
+6. `git checkout master`
+7. `bundle install`
+8. You're now ready.
 
-### Without Vagrant
-- Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or
-  `git clone https://github.com/whatisinternet/fireflower.git`
-- `cd fireflower`
-- `CONFIGURE_OPTS=--enable-shared rbenv install 2.3.0`
-- `rbenv global 2.3.0 && ruby -v`
-- `gem install bundler`
-- `rbenv rehash`
-- Go to [rustup.rs](https://rustup.rs/) and install Rust
-- `bundle install`
+---
+
+### Windows
+1. Clone or download the project `git clone git@github.com:whatisinternet/fireflower.git` or `git clone https://github.com/whatisinternet/fireflower.git`
+2. In command prompt or terminal: `cd fireflower`
+3. In command prompt or terminal: `vagrant up` (This will take a while)
+4. `vagrant ssh`
+5. `cd fireflower`
+6. `git checkout master`
+7. `bundle install`
+8. You're now ready.
+
+---
+
+### I know what I'm doing and I don't want Vagrant or VirtualBox
+1. Clone the repo `git clone git@github.com:whatisinternet/fireflower.git` or `git clone https://github.com/whatisinternet/fireflower.git`
+2. `cd fireflower`
+3. `CONFIGURE_OPTS=--enable-shared rbenv install 2.3.0`
+4. `rbenv global 2.3.0 && ruby -v`
+5. `gem install bundler`
+6. `rbenv rehash`
+7. Go to [rustup.rs](https://rustup.rs/) and install Rust
+8. `bundle install`
 
 
-## Tests:
-- In vagrant:
-  - `bundle exec rake && rspec`
+---
+
 
 ## Contributing
 
@@ -55,4 +69,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/whatis
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
