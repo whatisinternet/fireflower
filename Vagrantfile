@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 #
+# Parts borrowed from:
+# https://github.com/musitdev/portmidi-rs/blob/master/Vagrantfile and https://gist.github.com/dommmel/2cc0195b25c07358c15a
 $script = <<SCRIPT
 set -e
 set -x
@@ -43,11 +45,10 @@ rbenv rehash
 
 # install rust
 sudo sh -c 'echo "curl -L https://static.rust-lang.org/rustup.sh | sudo sh" > /usr/bin/rustup.sh'
-sudo chmod +x /usr/bin/rustup.sh
-# run 'rustup.sh'
+sudo chmod a+x /usr/bin/rustup.sh
 sudo /usr/bin/rustup.sh
-rustupPath='export PATH="$HOME/.cargo/bin:$PATH"'
-echo $rustupPath >> .bashrc
+rPath='export PATH="$HOME/.cargo/bin:$PATH"'
+echo $rPath >> .bashrc
 source ~/.bashrc
 source ~/.profile
 

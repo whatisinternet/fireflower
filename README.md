@@ -69,3 +69,11 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/whatis
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+## Attributions:
+
+- [Rbenv vagrant information](https://gist.github.com/dommmel/2cc0195b25c07358c15a)
+- [Rustup vagrant information](https://github.com/musitdev/portmidi-rs/blob/master/Vagrantfile)
+- [Ruru](https://github.com/d-unseductable/ruru#how-do-i-use-it)
+- [Thermite](https://github.com/malept/thermite)
